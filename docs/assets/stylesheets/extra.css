@@ -1,0 +1,69 @@
+/* SPDX-License-Identifier: Apache-2.0
+Copyright 2025 Latchfield Technologies http://latchfield.com */
+
+.md-header {
+    background-color: #3a3077;
+}
+
+.md-tabs {
+    background-color: #093652;
+}
+
+.wrapcode code {
+    white-space: pre-wrap;
+}
+
+.hide-copy button.md-clipboard {
+    display: none;
+}
+
+.md-typeset .sm {
+    --md-icon-size: 0.8em
+}
+
+.md-typeset .med {
+    --md-icon-size: 1.0em
+}
+
+.clear {
+    clear: both;
+}
+
+.center {
+    text-align: center;
+}
+
+.blue {
+    color: #5c49c9;
+}
+
+.green {
+    color: #2c8445;
+}
+
+.gold {
+    color: #ffb300;
+}
+
+.red {
+    color: #c81f1f;
+}
+
+.pink {
+    color: #f98cd1;
+}
+
+div.mermaid {
+    display: flex;
+    justify-content: center;
+}
+
+.language-text {
+    padding: 0 3em;
+}
+
+@media screen and (min-width: 60em) {
+    [dir="ltr"] .md-header__title {
+        margin-left: 0;
+    }
+}

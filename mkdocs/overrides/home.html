@@ -1,0 +1,30 @@
+{# SPDX-License-Identifier: Apache-2.0 #}
+{# Copyright 2025 Latchfield Technologies http://latchfield.com #}
+{% extends "main.html" %}
+{% block htmltitle %}
+<title>{{ config.extra.long_title }}</title>
+{% endblock %}
+
+{% block hero %}
+<section class="mdv-container">
+    <div class="md-grid md-typeset mdv-grid-hero">
+        <div class="mdv-hero">
+            <div class="mdv-hero__content">
+                <div class="mdv-grid-content">
+                    <img class="mdv-hero__logo_text" id="hero-image" src="assets/images/icon.svg" alt="A Moose!" style="padding-top:2rem; max-height:300px" draggable=false>
+                    <h3>{{ config.extra.site_tagline }}</h3>
+                    <a href="{{ page.next_page.url | url }}" title="{{ page.next_page.title | e }}" class="md-button md-button--primary">
+                        Start Here
+                    </a>
+                    <a href="{{ 'docs/' | url }}" title="Documentation" class="md-button">
+                        Some other Link
+                    </a>
+                </div>                      
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block tabs %}{% endblock %}
+{% block content %} {{ super() }} {% endblock %}

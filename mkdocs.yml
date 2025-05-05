@@ -1,0 +1,193 @@
+site_name: MkDocs Training
+site_description: "Use this repo as a starting place to for best practices and configuration."
+site_url: https://example.com/
+site_dir: site
+repo_name: your-repo/mkdocs-training
+repo_url: https://github.com/your-repo/mkdocs-training
+copyright: >-
+  Copyright &copy; 2025 Company Name.<br/>
+  <a href="#__consent">Manage cookie settings</a>
+extra:
+  git_sha: !ENV [GITHUB_SHA, 'development']
+  generator: false
+  long_title: MkDocs Training
+  site_tagline: MkDocs and Material for MkDocs are pretty awesome!
+  status:
+    new: Recently added
+    deprecated: Deprecated
+  analytics:
+    provider: google
+    property: !ENV GOOGLE_TAG_MANAGER_ID
+    feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/thumb-up-outline
+          name: This page was helpful
+          data: 1
+          note: >-
+            Thanks for your feedback!
+        - icon: material/thumb-down-outline
+          name: This page could be improved
+          data: 0
+          note: >- 
+            Thanks for your feedback! Help us improve this page by using our <a href="#">feedback form</a>
+
+  consent:
+    title: Cookie Consent
+    description: >- 
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
+watch:
+  - mkdocs/includes
+  - mkdocs/overrides      
+extra_css:
+  - assets/stylesheets/extra.css
+  - https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css
+extra_javascript:
+  - path: assets/javascripts/extra.js 
+exclude_docs: |
+  *.exclude.md
+  *.exclude.ipynb
+theme:
+  name: material
+  custom_dir: mkdocs/overrides
+  logo: assets/images/icon.svg
+  favicon: assets/images/icon.svg
+  icon:
+    repo: material/github
+    admonition:
+      note: octicons/tag-16
+      abstract: octicons/checklist-16
+      info: octicons/info-16
+      tip: octicons/light-bulb-16
+      success: octicons/check-circle-16
+      question: octicons/question-16
+      warning: octicons/alert-16
+      failure: octicons/x-circle-16
+      danger: octicons/alert-fill-12
+      bug: octicons/bug-16
+      example: octicons/beaker-16
+      quote: octicons/quote-16    
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode  
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: light blue
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: light blue
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to system preference
+  features:
+    - announce.dismiss
+    - content.code.annotate
+    - content.code.copy
+    - content.code.select
+    - content.tabs.link
+    - content.tooltips
+    - content.footnote.tooltips    
+    - header.autohide
+    - navigation.footer
+    # - navigation.indexes
+    - toc.integrate
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    # - navigation.sections
+    - navigation.path
+    # - navigation.prune
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow  
+markdown_extensions:
+  - meta
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - abbr
+  - attr_list
+  - md_in_html  
+  - footnotes 
+  - pymdownx.betterem
+  - pymdownx.blocks.admonition
+  - pymdownx.blocks.definition
+  - pymdownx.blocks.details
+  - pymdownx.blocks.html
+  - pymdownx.blocks.tab
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg      
+  - pymdownx.inlinehilite
+  - pymdownx.highlight:
+      anchor_linenums: true
+      linenums: true
+      pygments_lang_class: true
+      auto_title: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.snippets:
+      auto_append:
+        - mkdocs/includes/abbreviations.md
+  - pymdownx.tabbed:
+      alternate_style: true
+not_in_nav: |
+  /**/*.hidden.md
+plugins:
+  - search
+  - macros  
+  - awesome-nav
+  - mkdocstrings:
+      handlers:
+        python:
+          inventories:
+            - https://docs.python.org/3/objects.inv
+          options:
+            members_order: source
+            show_source: false 
+            summary: true
+            inherited_members: true
+            docstring_section_style: list
+            show_root_toc_entry: false
+            show_signature_annotations: true
+            show_symbol_type_heading: true
+            show_symbol_type_toc: true
+            signature_crossrefs: true
+  - minify:
+      minify_html: true
+      minify_js: false
+      minify_css: false
+      htmlmin_opts:
+        remove_comments: true
+      js_files:
+          - assets/javascripts/**/*.js
+      css_files:
+          - assets/stylesheets/**/*.css
+  # - htmlproofer:
+  #     raise_error_after_finish: True
+  #     skip_downloads: True
+validation:
+  omitted_files: warn
+  absolute_links: warn
+  unrecognized_links: warn
+  anchors: warn
