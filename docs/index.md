@@ -17,17 +17,25 @@ search:
 #### H4
 
 **Bold**
+
 *Italics*
-> blockquote
-> It was the Best of times, it was the worst of times...
+
+**blockquote**:
+> It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of light, it was the season of darkness. It was the spring of hope, it was the winter of despair, we had everything before us...
 
 1. First - первый
 2. Second - второй
 3. Third - tretiy
 
-   [CNN] (https://www.cnn.com)
+[CNN] (https://www.cnn.com)
    
-
+`code code code`
+---
+| Syntax | Description |
+|--------| ----------- |
+| Header | Title |
+| Paragraph | Red |
+| | Blue|
 
 ## More to Learn
 
