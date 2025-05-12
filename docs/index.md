@@ -11,11 +11,6 @@ search:
 
 # Welcome to the Documentation!
 
-# H1
-## H2
-### H3
-#### H4
-
 **Bold**
 
 *Italics*
@@ -28,8 +23,9 @@ search:
 3. Third - tretiy
 
 [CNN] (https://www.cnn.com)
-   
+
 `code code code`
+
 ---
 | Syntax | Description |
 |--------| ----------- |
@@ -37,6 +33,34 @@ search:
 | Paragraph | Red |
 | | Blue|
 
-## More to Learn
+### More to Learn
 
-Ipsum lorem dolor sit amet, dolor sit amet consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+The little tick marks (lines 38 and 44) enable the following to be read in a block (not all mk apps support this):
+```
+{
+"firstName": "Nicole",
+"lastName": "Noel",
+"hairColor": "dark brown",
+}
+```
+# H1
+## H2
+### H3
+#### H4
+---
+~ This is a strikethrough. ~
+
+**This is a task list:**
+
+- [x] Research
+- [ ] Write
+- [ ] Review
+
+Here is a sentence with a footnote. [^1]
+[^1]: This is the footnote
+
+I need to ==highlight== a word in a sentence.
+
+Subscript: H~2~O
+
+Superscript: x^4^
